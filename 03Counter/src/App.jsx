@@ -32,6 +32,7 @@ function App() {
     <button onClick={increaseValue} >Increase Value</button>
     <br/>
     <button onClick={decreaseValue}>Decrease Value</button>
+    <p>Created using hooks</p>
     <p>This is a footer: {counter}</p>
     </>
   )
