@@ -49,7 +49,7 @@ function App() {
             readOnly
             ref={passwordRef}
           />
-          <button onClick={copyPasswordToClipBoard} className="outline-none bg-blue-500 text-white px-3 py-0.5 shrink-0 ">
+          <button onClick={copyPasswordToClipBoard} className="outline-none bg-blue-500 text-white px-3 py-0.5 shrink-0 shadow transition transform active:scale-95">
             Copy
           </button>
         </div>
