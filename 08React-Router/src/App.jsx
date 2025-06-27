@@ -8,7 +8,12 @@ function App() {
 
   return (
     <>
-      <h1 className=''>React</h1>
+      <div className='bg-red-50 flex justify-around h-10 '>
+        <h1>React</h1>
+        <h1>React</h1>
+        <h1>React</h1>
+        <h1>React</h1>
+      </div>
     </>
   )
 }
