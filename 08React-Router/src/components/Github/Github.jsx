@@ -7,8 +7,9 @@ function Github() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get("https://api.github.com/users/shanbhagdivya");
+                const res = await axios.get("https://api.github.com/users/aryantambe");
                 setData(res.data);
+                console.log(data)
             } catch (error) {
                 console.error(error);
             }
@@ -18,8 +19,12 @@ function Github() {
 
     return (
         <>
-            <div className='text-center m-4 bg-gray-600 text-white p-4 text-3xl'>
+            <div className='  text-center m-4 bg-gray-600 text-white p-4 text-3xl'>
                 Github Followers: {data.followers}
+
+                <img className=''src={data.avatar_url} alt='Github dp'></img>
+
+                
             </div>
         </>
     );
