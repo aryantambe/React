@@ -9,7 +9,7 @@ function Github() {
             try {
                 const res = await axios.get("https://api.github.com/users/aryantambe");
                 setData(res.data);
-                console.log(data)
+                console.log(res.data)
             } catch (error) {
                 console.error(error);
             }
