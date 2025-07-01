@@ -1,21 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import axios from 'axios';
+import { useLoaderData } from 'react-router-dom'; 
 
 function Github() {
-    const [data, setData] = useState({});
+    const data=useLoaderData(); //Gets the res.data value i returned in my loader function
+    // const [data, setData] = useState({});
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const res = await axios.get("https://api.github.com/users/aryantambe");
-                setData(res.data);
-                console.log(res.data)
-            } catch (error) {
-                console.error(error);
-            }
-        };
-        fetchData(); // Call the async function
-    }, []);
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         try {
+    //             const res = await axios.get("https://api.github.com/users/aryantambe");
+    //             setData(res.data);
+    //             console.log(res.data)
+    //         } catch (error) {
+    //             console.error(error);
+    //         }
+    //     };
+    //     fetchData(); // Call the async function
+    // }, []);
 
     return (
         <>
@@ -31,3 +33,13 @@ function Github() {
 }
 
 export default Github;
+
+//Using Loader to optimize 
+
+export const githubInfoLoader=async ()=>{
+        const result = await axios.get("https://api.github.com/users/aryantambe");
+        return result.data;
+}     
+
+
+
