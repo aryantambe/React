@@ -9,13 +9,14 @@ function Login() {
     const {setUser} =useContext(UserContext)
     const handleSubmit=(e)=>{
         e.preventDefault();
-        setUser({username});
+        setUser({username,password}); 
     }
     return (
         <>
         <div>
             <h2>Login</h2>
             <input value={username} onChange={(e)=>setUsername(e.target.value)} type='text' placeholder='username'/>
+            
             <input value={password} onChange={(e)=>setPassword(e.target.value)} type='text' placeholder='password'/>
             <button onClick={handleSubmit}>Submit</button>
         </div>
@@ -24,4 +25,4 @@ function Login() {
     )
 }
 
-export default Login
+export default Login;
