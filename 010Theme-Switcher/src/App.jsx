@@ -16,7 +16,6 @@ function App() {
   }
 
   {/*Changing theme (JS) */}
-
   useEffect(()=>{
    
     document.querySelector('html').classList.remove("light","dark")
