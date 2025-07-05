@@ -1,1 +1,2 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *)); /*This is the new way to override dark mode in tailwind v4 */
